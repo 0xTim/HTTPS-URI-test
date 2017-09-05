@@ -21,5 +21,10 @@ extension Droplet {
         get("description") { req in return req.description }
         
         try resource("posts", PostController.self)
+        
+        get("uri") { req in
+            return req.uri.description
+            
+        }
     }
 }
